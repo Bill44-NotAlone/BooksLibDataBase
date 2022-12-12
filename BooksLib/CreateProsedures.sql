@@ -12,3 +12,16 @@ BEGIN
 	ELSE
 		INSERT INTO Book_Reader(reader_id, book_id) VALUES (@readerId, @bookId);
 END
+
+GO
+
+CREATE FUNCTION dbo.MyTableRowCount()
+RETURNS int
+AS
+ BEGIN
+    DECLARE @HowMany int
+
+    SELECT @HowMany = count(*)
+      from MyTable
+    RETURN @HowMany
+ END

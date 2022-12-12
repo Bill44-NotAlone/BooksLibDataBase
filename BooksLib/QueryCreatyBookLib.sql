@@ -58,5 +58,6 @@ CREATE TABLE Book_Reader(
 	duty		   MONEY	   NOT NULL DEFAULT(0),
 	book_id		   INT		   NOT NULL REFERENCES Book(id),
 	reader_id	   INT		   NOT NULL REFERENCES Reader(id),
-	UNIQUE(book_id, reader_id)
+	UNIQUE(book_id, reader_id),
+	CONSTRAINT The_reader_already_has_5_books_on_hand CHECK (dbo. BookReaderCount() >= 5
 );

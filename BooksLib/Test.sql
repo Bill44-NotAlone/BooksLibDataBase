@@ -30,3 +30,5 @@ EXECUTE Book_Reader_INSERT_PROCEDURE @readerId = 1, @bookId = 4;
 EXECUTE Book_Reader_INSERT_PROCEDURE @readerId = 1, @bookId = 5;
 EXECUTE Book_Reader_INSERT_PROCEDURE @readerId = 1, @bookId = 6;
 EXECUTE Book_Reader_INSERT_PROCEDURE @readerId = 1, @bookId = 7;
+
+INSERT INTO Book_Reader(reader_id, book_id) VALUES (@readerId, @bookId);

@@ -31,6 +31,12 @@
           <AssociatedConnUserName />
           <FullPath>CreateTriggers.sql</FullPath>
         </FileNode>
+        <FileNode Name="Error5Hand.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-O6KPLHR\MSSQLSERVER01:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-O6KPLHR\MSSQLSERVER01</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Error5Hand.sql</FullPath>
+        </FileNode>
         <FileNode Name="ForAssignment.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-O6KPLHR\MSSQLSERVER01:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-O6KPLHR\MSSQLSERVER01</AssociatedConnSrvName>
