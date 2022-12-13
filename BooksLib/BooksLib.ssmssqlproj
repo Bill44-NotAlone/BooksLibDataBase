@@ -3,7 +3,31 @@
   <Items>
     <LogicalFolder Name="Соединения" Type="2" Sorted="true">
       <Items>
-        <ConnectionNode Name="DESKTOP-O6KPLHR\MSSQLSERVER01:DESKTOP-O6KPLHR\Bill44">
+        <ConnectionNode Name="414-05\SQLEXPRESS:KPC\4-1p9">
+          <Created>2022-12-13T10:32:31.8372102+03:00</Created>
+          <Type>SQL</Type>
+          <Server>414-05\SQLEXPRESS</Server>
+          <UserName />
+          <Authentication>Проверка подлинности Windows</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Среда Microsoft SQL Server Management Studio - запрос</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="414-05\SQLEXPRESS01:KPC\4-1p9">
+          <Created>2022-12-13T10:24:30.1686471+03:00</Created>
+          <Type>SQL</Type>
+          <Server>414-05\SQLEXPRESS01</Server>
+          <UserName />
+          <Authentication>Проверка подлинности Windows</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Среда Microsoft SQL Server Management Studio - запрос</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="DESKTOP-O6KPLHR\MSSQLSERVER01:KPC\4-1p9">
           <Created>2022-12-01T12:39:38.4703778+03:00</Created>
           <Type>SQL</Type>
           <Server>DESKTOP-O6KPLHR\MSSQLSERVER01</Server>
@@ -26,8 +50,8 @@
           <FullPath>CreateProsedures.sql</FullPath>
         </FileNode>
         <FileNode Name="CreateTriggers.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-O6KPLHR\MSSQLSERVER01:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-O6KPLHR\MSSQLSERVER01</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:414-05\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>414-05\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>CreateTriggers.sql</FullPath>
         </FileNode>
@@ -38,14 +62,14 @@
           <FullPath>Error5Hand.sql</FullPath>
         </FileNode>
         <FileNode Name="ForAssignment.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-O6KPLHR\MSSQLSERVER01:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-O6KPLHR\MSSQLSERVER01</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:414-05\SQLEXPRESS01:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>414-05\SQLEXPRESS01</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>ForAssignment.sql</FullPath>
         </FileNode>
         <FileNode Name="QueryCreatyBookLib.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-O6KPLHR\MSSQLSERVER01:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-O6KPLHR\MSSQLSERVER01</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:414-05\SQLEXPRESS01:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>414-05\SQLEXPRESS01</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>QueryCreatyBookLib.sql</FullPath>
         </FileNode>

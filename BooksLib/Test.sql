@@ -23,12 +23,12 @@ INSERT INTO Human_Book(human_id, book_id) VALUES (1, 2);
 INSERT INTO Human_Book(human_id, book_id) VALUES (1, 3);
 GO
 
-EXECUTE Book_Reader_INSERT_PROCEDURE @readerId = 1, @bookId = 1;
-EXECUTE Book_Reader_INSERT_PROCEDURE @readerId = 1, @bookId = 2;
-EXECUTE Book_Reader_INSERT_PROCEDURE @readerId = 1, @bookId = 3;
-EXECUTE Book_Reader_INSERT_PROCEDURE @readerId = 1, @bookId = 4;
-EXECUTE Book_Reader_INSERT_PROCEDURE @readerId = 1, @bookId = 5;
-EXECUTE Book_Reader_INSERT_PROCEDURE @readerId = 1, @bookId = 6;
-EXECUTE Book_Reader_INSERT_PROCEDURE @readerId = 1, @bookId = 7;
-
-INSERT INTO Book_Reader(reader_id, book_id) VALUES (@readerId, @bookId);
+INSERT INTO Book_Reader(reader_id, book_id) VALUES (1, 1);
+INSERT INTO Book_Reader(reader_id, book_id) VALUES (1, 2);
+INSERT INTO Book_Reader(reader_id, book_id) VALUES (1, 3);
+INSERT INTO Book_Reader(reader_id, book_id) VALUES (1, 4);
+INSERT INTO Book_Reader(reader_id, book_id) VALUES (1, 5);
+INSERT INTO Book_Reader(reader_id, book_id) VALUES (1, 6);
+INSERT INTO Book_Reader(reader_id, book_id) VALUES (1, 7);
+INSERT INTO Book_Reader(reader_id, book_id) VALUES (2, 1);
+INSERT INTO Book_Reader(reader_id, book_id) VALUES (3, 1);
