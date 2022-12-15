@@ -2,15 +2,12 @@ USE BookLib;
 
 GO
 
-CREATE TRIGGER Book_Reader_INSERT_TRIGGER
-ON Book_Reader INSTEAD OF INSERT
+CREATE TRIGGER instance_trigger_instead_of_insert
+ON Instance INSTEAD OF INSERT
 AS
 BEGIN
-	IF (SELECT COUNT(*) FROM Book_Reader WHERE reader_id NOT IN (SELECT i.reader_id FROM inserted i) AND returned = 0) > 5
-	BEGIN
-		RAISERROR('The reader already has 5 books on hand', 16, 5)
-		RETURN
-	END
-	ELSE
-		INSERT INTO Book_Reader(reader_id, book_id) SELECT reader_id, book_id FROM inserted;
-END
+	DECLARE @bookId INT;
+	DECLARE @ordinalNumber INT;
+	SELECT @bookId = book_id, @ordinalNumber = ordinal_number FROM INSERTED;
+	INSERT INTO Instance VALUES (CAST(@bookId AS VARCHAR)+'_'+CAST(@ordinalNumber AS VARCHAR), @bookId, @ordinalNumber)
+END;

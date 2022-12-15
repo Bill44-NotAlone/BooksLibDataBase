@@ -21,9 +21,18 @@ CREATE TABLE Book(
 	id					INT			  NOT NULL IDENTITY,
 	title				NVARCHAR(64)  NOT NULL,
 	date_of_publication DATE		  NOT NULL,
-	quantity			INT			  NOT NULL	DEFAULT(1),
 	CONSTRAINT date_of_the_book_is_out_of_range CHECK(GETDATE() >= date_of_publication AND YEAR(date_of_publication) >= 1960)
 );
+
+GO
+
+CREATE TABLE Instance(
+	PRIMARY KEY (id),
+	id					VARCHAR(64)	  NOT NULL,
+	book_id				INT			  NOT NULL REFERENCES Book(id),
+	ordinal_number		INT			  NOT NULL,
+	UNIQUE(book_id, ordinal_number)
+)
 
 GO
 
@@ -49,14 +58,13 @@ CREATE TABLE Reader(
 
 GO
 
-CREATE TABLE Book_Reader(
+CREATE TABLE Instance_Reader(
 	PRIMARY KEY(id),
     id			   INT		   NOT NULL IDENTITY,
 	date_of_taking DATE		   NOT NULL DEFAULT(GETDATE()),
 	date_of_return DATE		   NOT NULL DEFAULT(DATEADD(day, 5, GETDATE())),
 	returned	   BIT		   NOT NULL DEFAULT(0),
 	duty		   MONEY	   NOT NULL DEFAULT(0),
-	book_id		   INT		   NOT NULL REFERENCES Book(id),
+	instance_id	   VARCHAR(64) NOT NULL REFERENCES Instance(id),
 	reader_id	   INT		   NOT NULL REFERENCES Reader(id),
-	UNIQUE(book_id, reader_id)
 );
