@@ -40,4 +40,3 @@ INSERT INTO Instance(book_id, ordinal_number) VALUES (3, 1);
 INSERT INTO Instance(book_id, ordinal_number) VALUES (3, 2);
 INSERT INTO Instance(book_id, ordinal_number) VALUES (3, 3);
 INSERT INTO Instance(book_id, ordinal_number) VALUES (3, 4);
-

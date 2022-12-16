@@ -1,6 +1,6 @@
-CREATE DATABASE BookLib;
+--CREATE DATABASE BookLib;
 
-GO
+--GO
 
 USE BookLib;
 
@@ -53,6 +53,7 @@ CREATE TABLE Reader(
 	telephone			VARCHAR(12)  NOT NULL,
 	human_id			INT		     NOT NULL REFERENCES Human(id),
 	UNIQUE(telephone),
+	UNIQUE(human_id),
 	CONSTRAINT phone_is_not_recognized CHECK(telephone NOT LIKE('^((8|\+374|\+994|\+995|\+375|\+7|\+380|\+38|\+996|\+998|\+993)[\- ]?)?\(?\d{3,5}\)?[\- ]?\d{1}[\- ]?\d{1}[\- ]?\d{1}[\- ]?\d{1}[\- ]?\d{1}(([\- ]?\d{1})?[\- ]?\d{1})?$'))
 );
 
@@ -67,4 +68,8 @@ CREATE TABLE Instance_Reader(
 	duty		   MONEY	   NOT NULL DEFAULT(0),
 	instance_id	   VARCHAR(64) NOT NULL REFERENCES Instance(id),
 	reader_id	   INT		   NOT NULL REFERENCES Reader(id),
+	CONSTRAINT the_reader_already_has_5_books_on_hand
+    CHECK(dbo.HowManyBooksReaderHas(reader_id) <= 5),
+	CONSTRAINT the_book_is_not_in_the_library
+	CHECK(dbo.BookInTheLibrary(instance_id) <= 1)
 );

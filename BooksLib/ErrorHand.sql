@@ -4,7 +4,7 @@ GO
 
  ALTER TABLE Instance_Reader
  ADD CONSTRAINT the_book_is_not_in_the_library
- CHECK(dbo.BookInTheLibrary(instance_id)<=0);
+ CHECK(dbo.BookInTheLibrary(instance_id) <= 1);
 
 GO
 
