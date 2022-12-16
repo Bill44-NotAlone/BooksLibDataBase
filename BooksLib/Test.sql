@@ -12,8 +12,8 @@ INSERT INTO Book(title, date_of_publication) VALUES ('7', '1.02.1966');
 
 GO
 
-INSERT INTO Human(name_human, surname) VALUES ('Василий', 'Очников');
-INSERT INTO Human(name_human, surname) VALUES ('Деблет', 'Мрачный');
+INSERT INTO Human(name_human, surname, date_of_born) VALUES ('Василий', 'Очников', '31.10.2002');
+INSERT INTO Human(name_human, surname, date_of_born) VALUES ('Деблет', 'Мрачный', '31.10.2003');
 
 GO
 
@@ -40,3 +40,9 @@ INSERT INTO Instance(book_id, ordinal_number) VALUES (3, 1);
 INSERT INTO Instance(book_id, ordinal_number) VALUES (3, 2);
 INSERT INTO Instance(book_id, ordinal_number) VALUES (3, 3);
 INSERT INTO Instance(book_id, ordinal_number) VALUES (3, 4);
+
+GO
+
+INSERT INTO Instance_Reader(reader_id, instance_id) VALUES (1, '1_1');
+INSERT INTO Instance_Reader(reader_id, instance_id) VALUES (1, '2_2');
+INSERT INTO Instance_Reader(reader_id, instance_id) VALUES (1, '3_3');

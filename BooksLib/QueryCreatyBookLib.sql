@@ -11,7 +11,8 @@ CREATE TABLE Human(
 	id			  INT		   NOT NULL IDENTITY,
 	name_human	  NVARCHAR(30) NOT NULL,
 	surname		  NVARCHAR(30) NOT NULL,
-	patronymic	  NVARCHAR(30) NULL
+	patronymic	  NVARCHAR(30) NULL,
+	date_of_born  DATE		   NOT NULL
 );
 
 GO
@@ -21,7 +22,7 @@ CREATE TABLE Book(
 	id					INT			  NOT NULL IDENTITY,
 	title				NVARCHAR(64)  NOT NULL,
 	date_of_publication DATE		  NOT NULL,
-	CONSTRAINT date_of_the_book_is_out_of_range CHECK(GETDATE() >= date_of_publication AND YEAR(date_of_publication) >= 1960)
+	CONSTRAINT the_book_must_be_no_older_than_1960 CHECK(GETDATE() >= date_of_publication AND YEAR(date_of_publication) >= 1960)
 );
 
 GO
