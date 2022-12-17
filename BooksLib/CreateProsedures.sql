@@ -25,3 +25,14 @@ AS
 			SELECT @countB = COUNT(*) FROM Instance_Reader WHERE instance_id=@instanceId AND returned=0;
 		RETURN @countB;
 	END
+
+--GO
+
+--CREATE FUNCTION UniqueTitle(@readerId INT, @instanceId VARCHAR(64))
+--RETURNS INT
+--AS
+--	BEGIN
+--		DECLARE @countB INT;
+--			SELECT @countB = COUNT(*) FROM Instance_Reader WHERE CAST((SELECT id FROM Book WHERE title IN (SELECT * FROM Book WHERE id = CAST(LEFT(@instanceId, 1) AS INT))) AS VARCHAR(1))+'_' LIKE instance_id;
+--		RETURN @countB;
+--	END
