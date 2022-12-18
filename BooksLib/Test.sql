@@ -48,4 +48,6 @@ GO
 INSERT INTO Instance_Reader(reader_id, instance_id) VALUES (1, '1_1');
 INSERT INTO Instance_Reader(reader_id, instance_id) VALUES (1, '2_2');
 INSERT INTO Instance_Reader(reader_id, instance_id) VALUES (1, '3_3');
+
+--TEST
 INSERT INTO Instance_Reader(reader_id, instance_id) VALUES (1, '8_1');
