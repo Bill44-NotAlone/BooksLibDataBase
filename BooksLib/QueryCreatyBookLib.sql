@@ -72,5 +72,7 @@ CREATE TABLE Instance_Reader(
 	CONSTRAINT the_reader_already_has_5_books_on_hand
     CHECK(dbo.HowManyBooksReaderHas(reader_id) <= 5),
 	CONSTRAINT the_book_is_not_in_the_library
-	CHECK(dbo.BookInTheLibrary(instance_id) <= 1)
+	CHECK(dbo.BookInTheLibrary(instance_id) <= 1),
+	CONSTRAINT the_book_with_this_title_is_already_in_hands_of_a_person
+	CHECK(dbo.UniqueTitle(reader_id, instance_id) <= 1)
 );

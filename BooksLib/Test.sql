@@ -9,6 +9,7 @@ INSERT INTO Book(title, date_of_publication) VALUES ('4', '1.02.1963');
 INSERT INTO Book(title, date_of_publication) VALUES ('5', '1.02.1964');
 INSERT INTO Book(title, date_of_publication) VALUES ('6', '1.02.1965');
 INSERT INTO Book(title, date_of_publication) VALUES ('7', '1.02.1966');
+INSERT INTO Book(title, date_of_publication) VALUES ('1', '1.02.1966');
 
 GO
 
@@ -40,9 +41,11 @@ INSERT INTO Instance(book_id, ordinal_number) VALUES (3, 1);
 INSERT INTO Instance(book_id, ordinal_number) VALUES (3, 2);
 INSERT INTO Instance(book_id, ordinal_number) VALUES (3, 3);
 INSERT INTO Instance(book_id, ordinal_number) VALUES (3, 4);
+INSERT INTO Instance(book_id, ordinal_number) VALUES (8, 1);
 
 GO
 
 INSERT INTO Instance_Reader(reader_id, instance_id) VALUES (1, '1_1');
 INSERT INTO Instance_Reader(reader_id, instance_id) VALUES (1, '2_2');
 INSERT INTO Instance_Reader(reader_id, instance_id) VALUES (1, '3_3');
+INSERT INTO Instance_Reader(reader_id, instance_id) VALUES (1, '8_1');
